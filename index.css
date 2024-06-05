@@ -1,0 +1,268 @@
+html {
+	scroll-behavior: smooth;
+  }
+.text{
+	text-align: center;
+    font-size: 40px;
+    letter-spacing: -50px;
+    width: 100%;
+    animation: change 5s forwards;
+	
+	font-size: 40px;
+	color: #FF4500;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) ;
+	height: 100%;
+	line-height: 80px;
+	z-index: -1;
+	box-sizing: content-box;
+	font-family: "Comic Sans MS", cursive;
+}
+@keyframes change{
+    from{
+        letter-spacing: -50px;
+        filter: blur(10px);
+		
+    }
+    to {
+        letter-spacing: 0px;
+        filter: blur(-2px);
+		
+    }
+}
+body{
+	background-image: url('./img/bc.gif');
+	background-attachment: fixed;
+	background-size: cover;
+	
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box !important;
+}
+
+.message-board {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.message-display {
+	height: 200px;
+	overflow-y: auto;
+	padding: 10px;
+}
+
+.message-input {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: none;
+	border-top: 1px solid #ccc;
+	outline: none;
+}
+
+.message {
+	background-color: #f9f9f9;
+	padding: 10px;
+	margin-bottom: 5px;
+	transition: all 0.3s ease; /* 过渡动画效果 */
+}
+
+.message:last-child {
+	margin-bottom: 0;
+}
+
+.message:hover {
+	background-color: #e0e0e0;
+}
+li{
+	cursor: pointer;
+}
+li:hover{
+	border: 1px solid #333;
+	border-radius: 15px;
+	font-size: 30px;
+	color:orange;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+a{
+	flex: 1;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4列，每列等宽 */
+	grid-template-rows: repeat(6, 1fr); /* 6行，每行等高 */
+	
+	}
+
+	.grid-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white; /* 默认为白色背景 */
+   font-size: 20px;
+   border-bottom: 1px solid #333;
+	}
+
+	/* 第一和第三行的背景颜色为灰色 */
+	.grid-item:nth-child(4n + 1),
+	.grid-item:nth-child(4n + 3) {
+	background-color: lightgray;
+	color: grey;
+	}
+	.footer {
+		margin-top: 30px;
+		color: black; /* 文字颜色 */
+		opacity: 0.63;
+		text-align: center; /* 文字居中 */
+		padding: 20px 0; /* 上下边距 */
+		width: 100%; /* 宽度100% */
+		font-size: 14px; /* 字体大小 */
+	  }
+	  
+	  .footer a {
+		color: #fff; /* 链接颜色 */
+		text-decoration: none; /* 去除下划线 */
+	  }
+	  .slideshow-container {
+		position: relative;
+		max-width: 100%; /* 轮播容器的最大宽度 */
+		margin: auto; /* 居中 */
+	  }
+	  
+	  .slide {
+		display: none; /* 默认隐藏所有轮播项 */
+	  }
+	  
+	  img {
+		width: 100%; /* 图片宽度填充轮播容器 */
+		height: 500px;
+	  }
+	  
+	  .prev, .next {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		padding: 16px;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+		z-index: 1; /* 放在轮播项上面 */
+	  }
+	  
+	  .prev {
+		left: 0;
+	  }
+	  
+	  .next {
+		right: 0;
+	  }
+	  .timeline {
+		list-style: none;
+		padding: 0;
+	  }
+	
+	  .timeline {
+		width: 100%;
+		list-style: none;
+		padding: 0;
+	  }
+	
+	  .event {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-bottom: 20px; /* 调整事件之间的间距 */
+	  }
+	
+	  .event::before {
+		content: '';
+		position: absolute;
+		left: 10px; /* 控制线的起点位置 */
+		border-left: 2px solid #ccc; /* 线的样式 */
+		height: calc(100% + 20px); /* 线的长度，加上圆圈的直径 */
+		top: 50%; /* 线的起点在事件容器的中间 */
+		transform: translateY(-50%); /* 将线垂直居中 */
+	  }
+	
+	  .event .circle {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: black;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	  }
+	
+	  .event .date {
+		margin-left: 30px;
+		width: 150px;
+		font-weight: bold;
+		flex: 1;
+	  }
+	
+	  .event .details {
+		flex: 7;
+		padding: 10px;
+		border: 1px solid #333;
+		border-radius: 15px;
+		margin-left: 40px; /* 调整文本内容的位置 */
+	  }
+	
+	  .event .name {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	  }
+	
+	  .event .description {
+		font-size: 16px;
+	  }
+	  .skills-container {
+		display: flex;
+		flex-direction: column;
+	  }
+	  
+	  .skill {
+		margin-bottom: 20px;
+		cursor: pointer;
+	  }
+	  
+	  .skill-name {
+		font-weight: bold;
+		font-size: 24px;
+		padding: 15px 30px;
+		border-radius: 8px;
+		background-color: #f0c87d;  /* 使用渐变背景 */
+		color: white;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 添加文本阴影效果 */
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加按钮阴影效果 */
+		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 添加动画效果 */
+	  }
+	  
+	  /* 定义鼠标悬停时的动画效果 */
+	  .skill-name:hover {
+		transform: translateY(-3px); /* 向上移动一点点 */
+		box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* 放大阴影效果 */
+	  }
+	  

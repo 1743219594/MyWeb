@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <div style="height: 80px;filter: contrast(30);opacity: 0.8;border: 1px solid #333;;position: fixed;width: 100%;z-index: 2;background-color: whitesmoke;box-sizing: border-box;top: 0;">
+        <div class="text">志在山顶的人，不会贪念山腰的风景。</div>  
+        <ul style="display: flex;width: 100%;z-index: 3;height: 100%;margin: 0;">
+            <li style="flex: 1;display: flex;align-items: center;justify-content: center;"><a href="#section1" >个人简介</a></li>
+            <li style="flex: 1;display: flex;align-items: center;justify-content: center;"><a href="#section3" >项目经历</a></li>
+            <li style="flex: 1;display: flex;align-items: center;justify-content: center;"><a href="#section5" >专业技能</a></li>
+            <li style="flex: 1;display: flex;align-items: center;justify-content: center;"><a href="#section2" >个人生活</a></li>
+           
+            <li style="flex: 1;display: flex;align-items: center;justify-content: center;"><a href="#section4" >留言板</a></li>
+            
+        </ul>
+    </div>
+    <div id="section1" style="width: 90%;margin-top: 100px;margin-bottom: 20px;font-weight: 700;font-size: 25px;background-color: whitesmoke;opacity: 0.7;padding: 10px;border: 1px solid #333;border-radius: 10px;box-sizing: border-box;">
+        <h3>个人简介</h3>
+        <div style="width: 100%;box-sizing: border-box;border-radius: 10px;">
+            <div class="grid-container">
+                <div class="grid-item">头像</div>
+                <div class="grid-item"><img src="./avator.jpg" alt="" style="width: 70px;height: 70px;"></div>
+                <div class="grid-item">姓名</div>
+                <div class="grid-item">吕志涛</div>
+                <div class="grid-item">性别</div>
+                <div class="grid-item">男</div>
+                <div class="grid-item">年龄</div>
+                <div class="grid-item">21</div>
+                <div class="grid-item">爱好</div>
+                <div class="grid-item">羽毛球</div>
+                <div class="grid-item">籍贯</div>
+                <div class="grid-item">广东省汕头市</div>
+                <div class="grid-item">职业</div>
+                <div class="grid-item">学生</div>
+                <div class="grid-item">个性签名</div>
+                <div class="grid-item">平安喜乐</div>
+                <div class="grid-item">邮箱</div>
+                <div class="grid-item">1743219594@qq.com</div>
+                <div class="grid-item">手机号</div>
+                <div class="grid-item">15915563316</div>
+              </div>
+        </div>
+    </div>
+    <div id="section3" style="width: 90%;margin-top: 100px;margin-bottom: 20px;font-weight: 700;font-size: 25px;background-color: whitesmoke;opacity: 0.7;padding: 10px;border: 1px solid #333;border-radius: 10px;box-sizing: border-box;">
+      <h3>项目经历</h3>
+      <ul class="timeline">
+          <li class="event">
+            <div class="circle"></div>
+            <div class="date">2023.10-2024.01</div>
+            <div class="details">
+              <div class="name">药食同源大健康小程序</div>
+              <div class="description">项目介绍:企业外包项目，具备微信登陆、商品选购、物流查询等功能</div>
+              <div class="description">技术栈:uniApp+Element-UI+Vuex+Vue-router</div>
+              <ol style="font-size: 16px;">
+                <li style="border: 0;">使用 JWT 技术验证用户信息,实现用户身份识别</li>
+                <li style="border: 0;">封装 uni.request 函数,方便功能的开发以及代码的维修</li>
+                <li style="border: 0;">配置 axios 拦截器，对请求的配置项与处理方式进行统一配置</li>
+                <li style="border: 0;">基于 Vuex 技术管理多页面共享的数据</li>
+              </ol>
+            </div>
+          </li>
+          <li class="event">
+            <div class="circle"></div>
+            <div class="date">2023.08-2023.10</div>
+            <div class="details">
+              <div class="name">心灵虹曦小程序</div>
+              <div class="description">项目介绍:广州大学计算机学院心协官方平台（微信小程序端）+管理后台（PC端），
+                已上线投入使用，累计用户已超过4百人，主要用于心协活动推广、学生线上心理咨询等。</div>
+              <div class="description">技术栈:Vue3+Node.js+Express+Element-plus+Websocket</div>
+              <ol style="font-size: 16px;">
+                <li style="border: 0;">使用 websocket 技术实现用户聊天页面的实时更新</li>
+                <li style="border: 0;">使用 wxs 实现类似 vue 过滤器功能，格式化数据</li>
+                <li style="border: 0;">配置 axios 拦截器，对请求的配置项与处理方式进行统一配置</li>
+                <li style="border: 0;">使用 rpx、vh 等单位实现机型适配、确保小程序在不同机型上的效果一致</li>
+              </ol>
+            </div>
+          </li>
+          <!-- Add more events here -->
+        </ul>
+        
+  </div>
+  <div id="section5" style="width: 90%;margin-top: 100px;margin-bottom: 20px;font-weight: 700;font-size: 25px;background-color: whitesmoke;opacity: 0.7;padding: 10px;border: 1px solid #333;border-radius: 10px;box-sizing: border-box;">
+    <h3>专业技能</h3>
+    <div class="skills-container">
+      <div class="skill">
+        <div class="skill-name">熟悉HTML/CSS/JavaScript,了解HTML5/CSS3/ES6+常用新特性</div>
+      </div>
+      
+      <div class="skill">
+        <div class="skill-name">熟悉Vue全家桶，能够使用Vue全家桶进行项目开发</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">熟练使用Vant、Element-UI等前端UI组件库</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">能够使用Vue、uniapp、微信小程序等多平台开发</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">了解Node.js，可以使用Express框架搭建后端服务器</div>
+      </div>
+      <!-- 添加更多技能 -->
+    </div>
+    
+      
+      <!-- 添加更多技能 -->
+    </div>
+    
+      
+</div>
+    <div id="section2" style="width: 90%;margin-top: 100px;margin-bottom: 20px;font-weight: 700;font-size: 25px;background-color: whitesmoke;opacity: 0.7;padding: 10px;border: 1px solid #333;border-radius: 10px;box-sizing: border-box;">
+        <h3>个人生活</h3>
+        <div style="width: 100%;box-sizing: border-box;border-radius: 10px;">
+            <div class="slideshow-container">
+                <div class="slide">
+                  <img src="./img/swiper1.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                  <img src="./img/swiper2.jfif" alt="Slide 2">
+                </div>
+                <div class="slide">
+                  <img src="./img/swiper3.jfif" alt="Slide 3">
+                </div>
+                <!-- 在此添加更多的轮播项 -->
+                
+                <!-- 上一页按钮 -->
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <!-- 下一页按钮 -->
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+              </div>
+              
+        </div>
+    </div>
+    
+    <div id="section4" style="width: 90%;margin-top: 100px;margin-bottom: 20px;font-weight: 700;font-size: 25px;background-color: whitesmoke;opacity: 0.7;padding: 10px;border: 1px solid #333;border-radius: 10px;box-sizing: border-box;">
+        <h3>留言板(可保存)</h3>
+        <div class="message-board">
+            <div class="message-display" id="messageDisplay">
+                <div class="message">欢迎来到留言板！</div>
+                <div class="message">想要说些什么吗？</div>
+                <div class="message">留言板功能很有趣！</div>
+                <!-- 这里展示留言 -->
+            </div>
+            <input type="text" class="message-input" id="messageInput" placeholder="输入留言...">
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 瘾诺的个人网站 2024-5-20
+      </footer>
+    
+        
+</body>
+    <script src="./index.js"></script>
+    <script>
+        
+        
+    </script>
+    
+</html>

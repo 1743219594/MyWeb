@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吕志涛的个人网站</title>
+<style>
+ #progressBarContainer {
+    width: 10%;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.welcome-message {
+    font-family: "Arial", sans-serif; /* 设置字体 */
+    font-size: 24px; /* 设置字体大小 */
+    color: #FFA500; /* 设置字体颜色 */
+    text-align: center; /* 文本居中 */
+    margin-top: 50px; /* 距离顶部的距离 */
+}
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(-45deg, #0278ee 36%, #7db9e8 28%, #7db9e8 67%, #0278ee 25%);
+    text-align: center;
+    background-size: 30px 30px; /* 控制斜纹的间距 */
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+    
+}
+*{
+    margin: 0;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 10%;
+    background-color: transparent;
+    color: white;
+
+    border-radius: 20px;
+}
+html{
+    height: 100%;
+}
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        background-color: #001f3f; /* 深蓝色背景 */
+    }
+    .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .star {
+        position: absolute;
+        border-radius: 50%;
+        background: white; /* 星星颜色为白色 */
+        animation: twinkle 5s infinite;
+    }
+    @keyframes twinkle {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+</style>
+
+</head>
+<body>
+    <div class="stars">
+    </div>
+    <div style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 500px;">
+            <img src="./avator.jpg" alt="" style="width: 150px;height: 150px;border-radius: 50%;border: 6px solid #ffffff;margin-bottom: 30px;">
+            <h2 style="color: white;margin-bottom: 20px;font-size: 45px;font-weight: 400;">吕志涛の个人网站</h2>
+            <div style="width: 100%;height:1px;background-color: #292e4f;margin-bottom: 40px;"></div>
+            <div style="font-size: 30px;color: #6f727f;margin-bottom: 40px;">尽力而为，平安喜乐！</div>
+            <div style="width: 100%;height:1px;background-color: #292e4f;margin-bottom: 40px;"></div>
+            <div style="font-size: 30px;color: #6f727f;margin-bottom: 40px;">欢迎来到我的主页！</div>
+        </div>
+        <button id="startButton">进入了解下</button>
+        <div id="progressBarContainer" class="hide">
+        <div id="progressBar"></div>
+       
+    </div>
+    <div style="display: flex;width: 800px;color: #cecfd8;align-items: center;margin-top: 50px;">
+        <div style="flex: 1;border-right: 1px solid #f3f3f3;text-align: center;">地址：广州市广州大学</div>
+        <div style="flex: 1;border-right: 1px solid #f3f3f3;text-align: center;">手机号:15915563316</div>
+        <div style="flex: 1;text-align: center;">email:1743219594@qq.com</div>
+    </div>
+    </div>
+    <script>
+        // Generate random stars
+        function generateStars() {
+            const starContainer = document.querySelector('.stars');
+            const numStars = 200; // Adjust this number to change the density of stars
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.width = `${Math.random() * 8}px`; // Adjust star size
+                star.style.height = star.style.width;
+                star.style.animationDelay = `${Math.random() * 3}s`; // Randomize animation delay
+                starContainer.appendChild(star);
+            }
+        }
+
+        // Generate stars when the page loads
+        window.addEventListener('load', generateStars);
+        document.getElementById('startButton').addEventListener('click', function() {
+        this.style.display = 'none'; // 隐藏按钮
+         document.getElementById('progressBarContainer').classList.remove('hide'); // 显示进度条容器
+
+        let progress = 0;
+        const interval = setInterval(function() {
+        if (progress >= 100) {
+            clearInterval(interval);
+            window.location.href = 'index.html'; // 跳转到另一个页面
+        } else {
+            progress++;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressBar').textContent = progress + '%';
+        }
+        }, 10); // 每100毫秒进度增加1%，可调整速度
+        });
+
+</script>
+
+</body>
+</html>
