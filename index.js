@@ -107,3 +107,22 @@ function showSlide(index) {
   }
   slides[slideIndex].style.display = "block";
 }
+// Generate random stars
+function generateStars() {
+  const starContainer = document.querySelector('.stars');
+  const numStars = 200; // Adjust this number to change the density of stars
+
+  for (let i = 0; i < numStars; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.width = `${Math.random() * 8}px`; // Adjust star size
+      star.style.height = star.style.width;
+      star.style.animationDelay = `${Math.random() * 3}s`; // Randomize animation delay
+      starContainer.appendChild(star);
+  }
+}
+
+// Generate stars when the page loads
+window.addEventListener('load', generateStars);

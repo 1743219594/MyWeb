@@ -15,7 +15,7 @@ html {
 	transform: translateY(-50%) ;
 	height: 100%;
 	line-height: 80px;
-	z-index: -1;
+	z-index: 0;
 	box-sizing: content-box;
 	font-family: "Comic Sans MS", cursive;
 }
@@ -32,10 +32,9 @@ html {
     }
 }
 body{
-	background-image: url('./img/bc.gif');
+	
 	background-attachment: fixed;
 	background-size: cover;
-	
 	padding-bottom: 10px;
 	display: flex;
 	flex-direction: column;
@@ -70,6 +69,8 @@ body{
 	padding: 10px;
 	margin-bottom: 5px;
 	transition: all 0.3s ease; /* 过渡动画效果 */
+	height: 40px;
+	line-height: 40px;
 }
 
 .message:last-child {
@@ -84,7 +85,7 @@ li{
 }
 li:hover{
 	border: 1px solid #333;
-	border-radius: 15px;
+	
 	font-size: 30px;
 	color:orange;
 }
@@ -106,7 +107,7 @@ a{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr); /* 4列，每列等宽 */
 	grid-template-rows: repeat(6, 1fr); /* 6行，每行等高 */
-	
+	width: 96%;
 	}
 
 	.grid-item {
@@ -265,4 +266,28 @@ a{
 		transform: translateY(-3px); /* 向上移动一点点 */
 		box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* 放大阴影效果 */
 	  }
-	  
+	  body {
+        margin: 0;
+        padding: 0;
+        
+        height: 100%;
+        background-color: #001f3f; /* 深蓝色背景 */
+    }
+    .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .star {
+        position: absolute;
+        border-radius: 50%;
+        background: white; /* 星星颜色为白色 */
+        animation: twinkle 5s infinite;
+    }
+    @keyframes twinkle {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }}
